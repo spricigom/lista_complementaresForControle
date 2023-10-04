@@ -15,11 +15,30 @@
     */
 
     //ENTRADA
-
+    const produtos = ["tomate", "batata", "batata-doce", "alface", "cebola", "cebolinha", "beterraba"];
+    let faturamento = 0;
     
     //PROCESSAMENTO
-    
+    for (let verifica = 0; verifica < produtos.length; verifica++) {
+        const vendidos = Number(prompt(`Informe quantas unidades/kilograma de ${produtos[verifica]} foram vendidos.`));
+        
+        if (produtos[verifica] == "tomate"){
+            faturamento += vendidos * 3.90;
+        }else if (produtos[verifica] == "batata"){
+            faturamento += vendidos * 3.40;
+        }else if (produtos[verifica] == "batata-doce"){
+            faturamento += vendidos * 4.70;
+        }else if (produtos[verifica] == "alface"){
+            faturamento += vendidos * 1.50;
+        }else if (produtos[verifica] == "cebola"){
+            faturamento += vendidos * 2.90;
+        }else if (produtos[verifica] == "cebolinha"){
+            faturamento += vendidos * 1.40;
+        }else if (produtos[verifica] == "beterraba"){
+            faturamento += vendidos * 4.10;
+        }
+    }
     
     //SAÍDA
-    
+    document.write(`Seu faturamento foi de: R$${faturamento.toFixed(2).replace("." , ",")}`);
 </script>

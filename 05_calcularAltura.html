@@ -1,3 +1,4 @@
+
 <script>
     //PROBLEMA
     /*
@@ -8,12 +9,16 @@
     */
 
     //ENTRADA
-
-    
+    const pessoas = Number(prompt("Quantas pessoas vão informar a medida de sua altura?"));
+    let medida = []
     //PROCESSAMENTO
-    
+    for (let index = 0; index < pessoas; index++) {
+        let altura = Number(prompt("Qual a sua altura?").replace(",", "."));
+        medida.push(altura);
+    }
+    medida.sort((a,b) =>a-b);
     
     //SAÍDA
-    
+    document.write(`Menor altura:${medida[0].toFixed(2).replace("." , ",")}m <br> Maior altura:${medida[medida.length-1].toFixed(2).replace("." , ",")}m  `);
 
 </script>

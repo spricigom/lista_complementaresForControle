@@ -7,12 +7,29 @@
     Apresente também qual foi o rendimento que a pessoa obteve em cada um dos períodos (ou seja, o que conseguiu obter além da quantia investida).
     */
 
-    //ENTRADA
+       //ENTRADA
+    let investimento=100;
+    let meses=0; 
 
-    
+    for (meses = 1; meses <= 24; meses++) {
+        investimento = investimento*1.018;
+    }
+    document.write(`o retorno dps de 24 meses é de ${investimento.toFixed(0)} reais <br> `);
+    for (meses = 1; meses <= 48; meses++) {
+        investimento = investimento*1.018;
+    }
+
     //PROCESSAMENTO
-    
-    
+    document.write(`o retorno dps de 48 meses é de ${investimento.toFixed(0)} reais <br> `);
+
+    for (meses = 1; meses <= 96; meses++) {
+        investimento = investimento*1.018;
+    }
+
+    document.write(`o retorno dps de 96 meses é de ${investimento.toFixed(0)} reais `);
+
     //SAÍDA
+
+
     
 </script>

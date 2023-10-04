@@ -14,13 +14,29 @@
     let drama = [];
     let romance = [];
     //PROCESSAMENTO
-    for (let contador = 0; contador <= qtd; contador++) {
+    for (let contador = 1; contador <= qtd; contador++) {
         const nomefilme = prompt("Informe o nome do filme");
         const genero = prompt ("Informe o genero do filme utilizando: (C) comédia, (D) drama ou (R) romance").toUpperCase();
-        
+        if (genero == "C"){
+            comedia.push(nomefilme);
+        }
+        else if (genero == "D"){
+            drama.push(nomefilme);
+        }
+        else if (genero == "R"){
+            romance.push(nomefilme);
+        }
     }
     
     //SAÍDA
     
-    
+    if (comedia.length > 0 ){
+        document.write(`Comedia: ${comedia.join(" -")}<br>`);
+    }
+     if(romance.length > 0){
+        document.write(`Romance: ${romance.join(" -")}<br>`);
+     }
+    if(drama.length > 0){
+        document.write(`Drama ${drama.join(" -")}<br>`);
+    }
 </script>
